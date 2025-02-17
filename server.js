@@ -9,13 +9,19 @@ const PORT = process.env.PORT || 4000;
 
 const app = express();
 
-// Middleware
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views")); 
+
+
 app.use(express.static(path.join(__dirname, "public")));
 
-// Use page routes
-app.use(pageRoute);
+app.use(pageRoute); 
+
 
 app.listen(PORT, () => {
   console.log(`The server is running on port ${PORT}`.bgRed.white);

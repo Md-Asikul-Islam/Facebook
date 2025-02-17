@@ -1,25 +1,32 @@
-const express = require("express");
-const path = require('path')
-
 const showHomepage = (req, res) => {
-  res.status(200).sendFile(path.join(__dirname,'../public/index.html'));
+  res.render("home");
 };
 
 const showAboutpage = (req, res) => {
-  res.status(200).sendFile(path.join(__dirname,'../public/about.html'));
+  res.render("page", {
+    title : " About",
+    desc : " This is our About Page "
+  });
 };
 
+
 const showContactpage = (req, res) => {
-  res.status(200).sendFile(path.join(__dirname,'../public/contact.html'));
+  res.render("page", {
+    title : " Contact",
+    desc : " This is our Contact Page "
+  });
 };
 
 const showTeampage = (req, res) => {
-  res.status(200).sendFile(path.join(__dirname,'../public/team.html'));
+  res.render("page", {
+    title : " Team",
+    desc : " This is our Team Page "
+  });
 };
 
 module.exports = {
   showHomepage,
-  showContactpage,
   showAboutpage,
+  showContactpage,
   showTeampage
-}
+};
