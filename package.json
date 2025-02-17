@@ -1,0 +1,18 @@
+{
+  "name": "facebook",
+  "version": "1.0.0",
+  "description": "This project focuses on integrating Facebook's API with a server-side application to enable seamless data exchange and automation.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Md Asikul Islam",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  }
+}
