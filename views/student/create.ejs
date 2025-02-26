@@ -1,0 +1,52 @@
+<div class="container my-5 student-form">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <a class="btn btn-sm btn-outline-primary mb-3" href="/student">
+                <i class="fas fa-arrow-left"></i> Back
+            </a>
+            <div class="card shadow-lg rounded">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0 text-center">Add New Student</h3>
+                </div>
+                <div class="card-body">
+                   <form action="/student/create" method="post">
+                      <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input name="name" type="text" class="form-control" placeholder="Enter full name" required>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input name="email" type="email" class="form-control" placeholder="Enter email" required>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Cell</label>
+                        <input name="cell" type="tel" class="form-control" placeholder="Enter phone number" required>
+                      </div>
+                  
+                      <div class="mb-3">
+                        <label class="form-label">Location</label>
+                        <select name="location" class="form-control" required>
+                            <option selected disabled>Choose location</option>
+                            <option>Rampura</option>
+                            <option>Malibagh</option>
+                            <option>Dhanmondi</option>
+                            <option>Badda</option>
+                            <option>Ashkona</option>
+                            <option>Farmgate</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">Photo</label>
+                        <input  type="file" class="form-control">
+                      </div>
+                      <div class="d-grid">
+                        <button type="submit" class="btn btn-success btn-lg">
+                            <i class="fas fa-user-plus"></i> Create Student
+                        </button>
+                      </div>
+                   </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
